@@ -26,12 +26,11 @@
         dataType:"text",
         url:"SenseHat.csv",
         cache:false
-    });
+    }
+    printTable(promise);
+    );
       if(isAPIAvailable()) {
         $('#files').bind('change', handleFileSelect);
-      }
-      else{
-        $promise.printTable(promise);
       }
     });
     function isAPIAvailable() {
