@@ -26,9 +26,8 @@
         dataType:"text",
         url:"SenseHat.csv",
         cache:false
-    }
-    printTable(promise);
-    );
+       });
+      printTable(promise);
       if(isAPIAvailable()) {
         $('#files').bind('change', handleFileSelect);
       }
