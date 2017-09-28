@@ -21,7 +21,14 @@
   <script src="jquery.csv.js"></script>
   <script>
     $(document).ready(function() {
-      if(true) {
+       promise = $.ajax({
+        type:"GET",
+        dataType:"text",
+        url:"SenseHat.csv",
+        cache:false
+    });
+    printTable(promise);
+      if(isAPIAvailable()) {
         $('#files').bind('change', handleFileSelect);
       }
     });
