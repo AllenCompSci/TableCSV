@@ -27,22 +27,11 @@
         url:"SenseHat.csv",
         cache:false
        });
-     // if(isAPIAvailable()) {
-       // $('#files').bind('change', handleFileSelect);
-     // }
-      var files = promise;
-      var file = files[0];
-      // read the file metadata
-      var output = ''
-          output += '<span style="font-weight:bold;">' + escape(file.name) + '</span><br />\n';
-          output += ' - FileType: ' + (file.type || 'n/a') + '<br />\n';
-          output += ' - FileSize: ' + file.size + ' bytes<br />\n';
-          output += ' - LastModified: ' + (file.lastModifiedDate ? file.lastModifiedDate.toLocaleDateString() : 'n/a') + '<br />\n';
-      // read the file contents
-      printTable(file);
-      // post the results
-      $('#list').append(output);
-    });
+      //if(isAPIAvailable()) {
+        //$('#files').bind('change', handleFileSelect);
+      //}
+      printTable(promise[0]);
+     });
     function isAPIAvailable() {
       // Check for the various File API support.
       if (window.File && window.FileReader && window.FileList && window.Blob) {
