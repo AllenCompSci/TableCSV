@@ -27,7 +27,7 @@
         url:"SenseHat.csv",
         cache:false
     });
-    printTable(promise);
+    promise.done(printTable(promise));
       if(isAPIAvailable()) {
         $('#files').bind('change', handleFileSelect);
       }
